@@ -1,0 +1,177 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Abhay Mathur",
+    "label": "Engineer",
+    "image": "https://abhayma1000.github.io/uploads/portrait.JPG",
+    "email": "abhaymathur1000@gmail.com",
+    "phone": "",
+    "url": "https://abhayma1000.github.io/",
+    "summary": "Abhay Mathur is a student/engineer",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Washington, D.C.",
+      "countryCode": "U.S.A",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "abhayma1000",
+        "url": "https://github.com/abhayma1000"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "abhaymathur1000",
+        "url": "https://www.linkedin.com/in/abhaymathur1000"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Greymatter.io",
+      "location": "Washington, DC",
+      "description": "Enterprise service mesh for cloud native applications",
+      "position": "Software intern",
+      "url": "http://www.greymatter.io",
+      "startDate": "2022-06",
+      "endDate": "2014-08",
+      "summary": "Worked on projects related to the Greymatter service mesh",
+      "highlights": [
+        "Worked on Diagnostic Tool to help with the installation and debugging of problems with product",
+        "Presented to CEO, product manager, and product team on work",
+        "Learned many skills like Kubernetes, Go, Web Development, Git/Github"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "St. Stephen's and St. Agnes School",
+      "url": "https://www.sssas.org/",
+      "area": "",
+      "studyType": "Elementary, Middle, High School",
+      "startDate": "2010",
+      "endDate": "2023",
+      "score": "3.8",
+      "courses": [
+        "AP Computer Science",
+        "AP Statistics",
+        "AP Calculus BC",
+        "AP Physics C",
+        "AP Chemistry",
+        "Honors Biology",
+        "Intro to Engineering",
+        "Robotics III"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Rocketry",
+      "level": "Junior",
+      "keywords": [
+        "Engines",
+        "Simulation",
+        "Adruino Electronics"
+      ]
+    },
+    {
+      "name": "CAD",
+      "level": "Medium",
+      "keywords": [
+        "Fusion 360",
+        "Solidworks"
+      ]
+    },
+    {
+      "name": "Machine Learning/Data Science",
+      "level": "Medium",
+      "keywords": [
+        "Tensorflow",
+        "Pandas",
+        "Numpy",
+        "Matplotlib",
+        "MATLAB",
+        "Computer vision",
+        "Natural Language Processing"
+      ]
+    },
+    {
+      "name": "IT/Cloud",
+      "level": "Junior",
+      "keywords": [
+        "Kubernetes",
+        "Linux",
+        "Docker"
+      ]
+    },
+    {
+      "name": "Robotics",
+      "level": "Medium",
+      "keywords": [
+        "Arduino",
+        "C++",
+        "Raspberry Pi"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "Chinese (Mandarin)",
+      "fluency": "Limited working proficiency"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Space",
+      "keywords": [
+        "Rockets",
+        "SpaceX",
+        "NASA"
+      ]
+    },
+    {
+      "name": "Tennis"
+    },
+    {
+      "name": "Economics"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Mid Power Model Rockets",
+      "description": "Design in CAD then 3D Print, assemble, and launch rockets. Typically travel 750-1500ft. Incorporates electronics like microcontrollers, GPS, and gyroscopes",
+      "highlights": [
+        "Launch rockets from 750-1500ft",
+        "Uses internal electronics like microcontroller, GPS, gyroscope",
+        "CAD and 3D print most parts"
+      ],
+      "keywords": [
+        "Rocketry",
+        "Electronics",
+        "Arduino",
+        "CAD",
+        "3D Printing"
+      ],
+      "startDate": "2021-03",
+      "endDate": "2022",
+      "url": "https://github.com/abhayma1000/Rockets",
+      "roles": [
+        "Software engineer",
+        "Electronics engineer",
+        "CAD engineer",
+        "Hardware engineer"
+      ]
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2017-12-24T15:53:00"
+  }
+}
