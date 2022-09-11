@@ -1,0 +1,38 @@
+.content {
+    /* max-width: 500px; */
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+
+ul {
+    text-align: justify;
+}
+ul:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+ul:before {
+    content: '';
+    display: block;
+    margin-top: -1.25em;
+}
+li {
+    display: inline-block;
+    margin-right: -.25em;
+    position: relative;
+    top: 1.25em;
+}
+
+@font-face {
+    font-family: 'blackthorns'; /*a name to be used later*/
+    src: url('uploads/blackthorns_font.ttf'); /*URL to font*/
+}
+
+.text {
+    font-family: 'blackthorns';
+}
+
