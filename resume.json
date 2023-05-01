@@ -33,15 +33,15 @@
       "name": "Greymatter.io",
       "location": "Washington, DC",
       "description": "Enterprise service mesh for cloud native applications",
-      "position": "Software intern",
+      "position": "Software Development Intern",
       "url": "http://www.greymatter.io",
       "startDate": "2022-06",
-      "endDate": "2014-08",
-      "summary": "Worked on projects related to the Greymatter service mesh",
+      "endDate": "2022-09",
+      "summary": "Worked on Department of Defense projects related to the Greymatter Service Mesh, API Management and developing one-stop security solutions.",
       "highlights": [
-        "Worked on Diagnostic Tool to help with the installation and debugging of problems with product",
-        "Presented to CEO, product manager, and product team on work",
-        "Learned many skills like Kubernetes, Go, Web Development, Git/Github"
+        "Worked on Diagnostic Tool to help with the installation and debugging of problems with company's product.",
+        "Presented to CEO, Product Manager, and Product Team improvement guidelines.",
+        "Acquired skills like the use of Kubernetes, Go, Web Development, Git/Github"
       ]
     }
   ],
