@@ -5,12 +5,12 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Abhay Mathur",
-    "label": "Engineer",
+    "label": "Software Engineer",
     "image": "https://abhayma1000.github.io/uploads/portrait.JPG",
     "email": "abhaymathur1000@gmail.com",
     "phone": "",
     "url": "https://abhayma1000.github.io/",
-    "summary": "Abhay Mathur is a student/engineer",
+    "summary": "Abhay Mathur is a student/software engineer",
     "location": {
       "address": "",
       "postalCode": "",
@@ -40,7 +40,7 @@
       "url": "http://www.greymatter.io",
       "startDate": "2022-06",
       "endDate": "2022-09",
-      "summary": "Worked on Department of Defense projects related to the Greymatter Service Mesh, API Management and developing one-stop security solutions.",
+      "summary": "Worked on projects related to the Greymatter Service Mesh, API Management and developing one-stop security solutions.",
       "highlights": [
         "Worked on Diagnostic Tool to help with the installation and debugging of problems with company's product.",
         "Presented to CEO, Product Manager, and Product Team improvement guidelines.",
@@ -115,7 +115,8 @@
       "keywords": [
         "Arduino",
         "C++",
-        "Raspberry Pi"
+        "Raspberry Pi",
+        "FIRST FTC"
       ]
     }
   ],
@@ -126,7 +127,11 @@
     },
     {
       "language": "Chinese (Mandarin)",
-      "fluency": "Limited working proficiency"
+      "fluency": "Limited working proficiency (actively learning)"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Limited working proficiency (actively learning)"
     }
   ],
   "interests": [
