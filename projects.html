@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projects</title>
+
+    <iframe 
+        src="navbar.html" 
+        width="100%" 
+        height="80px" 
+        frameborder="0" 
+        style="position: absolute; top: 0; left: 0; z-index: 1000; border: none;">
+    </iframe>
+    <header>Projects</header>
+
+</head>
+<body>
+
+    <div class="projects-container" id="projects-container"></div>
+
+    <script>
+        // Fetch project data from JSON
+        fetch('projects.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('projects-container');
+                data.forEach(project => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+
+                    // Limit description to 200 characters
+                    const truncatedDescription = project.description.length > 200 
+                        ? project.description.substring(0, 200) + '...' 
+                        : project.description;
+
+                    card.innerHTML = `
+                        <img src="${project.image}" alt="${project.title}">
+                        <div class="card-content">
+                            <p class="date">${project.date_created}</p>
+                            <h3 class="card-title"><a href="project.html?id=${project.id}">${project.title}</a></h3>
+                            <p class="card-description">${truncatedDescription}</p>
+                            <div class="card-link"><a href="project.html?id=${project.id}">Learn More</a></div>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Error loading project data:', error));
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "title": "Youtube",
+        "username": "abhaymathur1000@gmail.com",
+        "description": "My channel with content from X,Y,Z",
+        "image": "project1.jpg",
+        "link": "https://youtube.com"
+    },
+    {
+        "id": 2,
+        "title": "Github",
+        "username": "@abhayma1000",
+        "description": "My Github with all code",
+        "image": "project1.jpg",
+        "link": "https://github.com"
+    },
+    {
+        "id": 3,
+        "title": "LinkedIn",
+        "username": "@abhayma1000",
+        "description": "My linkedin with stuff",
+        "image": "project1.jpg",
+        "link": "https://linkedin.com"
+    },
+    {
+        "id": 4,
+        "title": "Email",
+        "username": "abhaymathur1000@gmail.com",
+        "description": "Work email",
+        "image": "project1.jpg",
+        "link": "mailto:abhaymathur1000@gmail.com"
+    }
+]

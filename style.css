@@ -1,38 +1,197 @@
-.content {
-    /* max-width: 500px; */
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
 
-
-ul {
-    text-align: justify;
+:root {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --accent-color: #bb86fc;
+    --card-background: #1e1e1e;
 }
-ul:after {
-    content: '';
-    display: inline-block;
+
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+.top-right-links {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.top-right-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-left: 15px;
+    font-family: 'Rajdhani', sans-serif;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.top-right-links a:hover {
+    text-decoration: none;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-radius: 5px;
+}
+
+
+header {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--accent-color);
+    animation-fill-mode: forwards;
+    z-index: 1001;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.big-card {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    height: auto;
+    text-align: center;
+}
+
+
+.card {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 300px; /* Set the maximum width */
+    height: auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.card-description {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.card-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-left: 15px;
+    font-family: 'Rajdhani', sans-serif;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.card-link a:hover {
+    text-decoration: none;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-radius: 5px;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
     width: 100%;
 }
-ul:before {
-    content: '';
-    display: block;
-    margin-top: -1.25em;
-}
-li {
-    display: inline-block;
-    margin-right: -.25em;
+
+.project-container {
+    max-width: 800px;
+    margin-top: 20px;
+    text-align: center;
     position: relative;
-    top: 1.25em;
+}
+.project-container img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.project-title {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+.project-description {
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-@font-face {
-    font-family: 'blackthorns'; /*a name to be used later*/
-    src: url('uploads/blackthorns_font.ttf'); /*URL to font*/
+.card-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-left: 15px;
+    font-family: 'Rajdhani', sans-serif;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
 }
 
-.text {
-    font-family: 'blackthorns';
+.card-link a:hover {
+    text-decoration: none;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-radius: 5px;
 }
 
+.date {
+    font-size: 1em;
+    font-style: italic;
+    color: #dec3ff;
+}
+
+.redirect-link a {
+    text-align: left;
+    position: absolute;
+    left: 0;
+
+}

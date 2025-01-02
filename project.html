@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Abhay Mathur</title>
+</head>
+<body>
+    <iframe 
+        src="navbar.html" 
+        width="100%" 
+        height="80px" 
+        frameborder="0" 
+        style="position: absolute; top: 0; left: 0; z-index: 1000; border: none;">
+    </iframe>
+    <br>
+    <br>
+    <br>
+    <header id="project-title"></header>
+    <p class="date" id="project-date_created"></p>
+    <div class="project-container">
+        <img id="project-image" src="" alt="Project Image">
+        <p id="project-description" class="project-description"></p>
+        <div class="card-link redirect-link"><a id="project-learn_more_link" href="">Go to project</a></div>
+        <div class="card-link"><a href="projects.html">Return to projects</a></div>
+    </div>
+
+    <script>
+        // Parse query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('id');
+
+        // Fetch project data
+        fetch('projects.json')
+            .then(response => response.json())
+            .then(data => {
+                const project = data.find(p => p.id == projectId);
+                if (project) {
+                    document.getElementById('project-title').textContent = project.title;
+                    document.getElementById('project-image').src = project.image;
+                    document.getElementById('project-image').alt = project.title;
+                    document.getElementById('project-description').textContent = project.description;
+                    document.getElementById('project-date_created').textContent = project.date_created;
+                    document.getElementById('project-learn_more_link').href = project.learn_more_link;
+                    console.log(project.description);
+                } else {
+                    document.getElementById('project-title').textContent = "Project not found.";
+                    document.getElementById('project-description').textContent = "The project you are looking for does not exist.";
+                }
+            })
+            .catch(error => console.error('Error loading project data:', error));
+    </script>
+</body>
+</html>
+
+
+<!-- TODO THE SPACING ON THE TITLE IS OFF WITH THE NAV BAR -->
