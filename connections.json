@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "title": "Youtube",
+        "username": "@abhayma7",
+        "description": "My channel with content on a variety of subjects from academic to sports to life",
+        "image": "uploads/images/youtube.jpg",
+        "link": "https://www.youtube.com/@abhayma7"
+    },
+    {
+        "id": 2,
+        "title": "Github",
+        "username": "@abhayma1000",
+        "description": "My Github page with code for various personal and professional projects",
+        "image": "uploads/images/github.png",
+        "link": "https://github.com/abhayma1000"
+    },
+    {
+        "id": 3,
+        "title": "LinkedIn",
+        "username": "@abhaymathur1000",
+        "description": "My linkedin page with a list of experiences and skills",
+        "image": "uploads/images/linkedin.png",
+        "link": "https://www.linkedin.com/in/abhaymathur1000/"
+    },
+    {
+        "id": 4,
+        "title": "Email",
+        "username": "abhaymathur1000@gmail.com",
+        "description": "My work email to send inquiries and questions",
+        "image": "uploads/images/email.png",
+        "link": "mailto:abhaymathur1000@gmail.com"
+    }
+]

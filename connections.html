@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <iframe 
+        src="navbar.html" 
+        width="100%" 
+        height="80px" 
+        frameborder="0" 
+        style="position: absolute; top: 0; left: 0; z-index: 1000; border: none;">
+    </iframe>
+    <header>Connect</header>
+
+</head>
+<body>
+    <div class="projects-container" id="projects-container"></div>
+
+    <script>
+        // Fetch project data from JSON
+        fetch('connections.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('projects-container');
+                data.forEach(connection => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+
+                    card.innerHTML = `
+                        <div class="project-container">
+                            <a href="${connection.link}"><img src="${connection.image}" alt="${connection.title}"></a>
+                            <div class="card-content">
+                                <a href="${connection.link}"><p class="date">${connection.username}</p></a>
+                                <h3 class="card-title"><a href="${connection.link}">${connection.title}</a></h3>
+                                <p class="card-description">${connection.description}</p>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Error loading project data:', error));
+    </script>
+</body>
+</html>

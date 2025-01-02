@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Abhay Mathur</title>
+</head>
+<body>
+    <iframe 
+        src="navbar.html" 
+        width="100%" 
+        height="80px" 
+        frameborder="0" 
+        style="position: absolute; top: 0; left: 0; z-index: 1000; border: none;">
+    </iframe>
+    <br>
+    <br>
+    <br>
+    <header id="project-title"></header>
+    <div class="project-container">
+        <p class="date" id="project-date_created"></p>
+        <img id="project-image" src="" alt="Project Image">
+
+        <!-- Begin page -->
+        <h1>Purpose</h1>
+        <br>
+        <p>The purpose here is to create a personal website that can be a central location holding everything about me</p>
+        <br>
+        <p>This is also a location to dump projects of mine and showcase my work</p>
+
+        <h1>Future</h1>
+        <p>I will keep this up to date and I hope to keep adding new features like maybe a blog to this website</p>
+
+        <!-- End page -->
+
+        
+        <div class="card-link redirect-link"><a id="project-learn_more_link" href="">Go to project</a></div>
+        <div class="card-link"><a href="projects.html">Return to projects</a></div>
+    </div>
+
+    <script>
+        const projectId = 1
+
+        // Fetch project data
+        fetch('projects.json')
+            .then(response => response.json())
+            .then(data => {
+                const project = data.find(p => p.id == projectId);
+                if (project) {
+                    document.getElementById('project-title').textContent = project.title;
+                    document.getElementById('project-image').src = project.image;
+                    document.getElementById('project-image').alt = project.title;
+                    document.getElementById('project-date_created').textContent = project.date_created;
+                    document.getElementById('project-learn_more_link').href = project.learn_more_link;
+                } else {
+                    document.getElementById('project-title').textContent = "Project not found.";
+                    document.getElementById('project-description').textContent = "The project you are looking for does not exist.";
+                }
+            })
+            .catch(error => console.error('Error loading project data:', error));
+    </script>
+</body>
+</html>
