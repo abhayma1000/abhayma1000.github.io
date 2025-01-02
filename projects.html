@@ -39,9 +39,9 @@
                         <img src="${project.image}" alt="${project.title}">
                         <div class="card-content">
                             <p class="date">${project.date_created}</p>
-                            <h3 class="card-title"><a href="project.html?id=${project.id}">${project.title}</a></h3>
+                            <h3 class="card-title"><a href="project${project.id}.html">${project.title}</a></h3>
                             <p class="card-description">${truncatedDescription}</p>
-                            <div class="card-link"><a href="project.html?id=${project.id}">Learn More</a></div>
+                            <div class="card-link"><a href="project${project.id}.html">Learn More</a></div>
                         </div>
                     `;
                     container.appendChild(card);

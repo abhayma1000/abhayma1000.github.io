@@ -18,18 +18,23 @@
     <br>
     <br>
     <header id="project-title"></header>
-    <p class="date" id="project-date_created"></p>
     <div class="project-container">
+        <p class="date" id="project-date_created"></p>
         <img id="project-image" src="" alt="Project Image">
-        <p id="project-description" class="project-description"></p>
+
+
+        <h1>Purpose</h1>
+        <br>
+        <p>The purpose here is to do x, y, z and because this</p>
+        <!-- TODO ADD STUFF HERE -->
+
+        
         <div class="card-link redirect-link"><a id="project-learn_more_link" href="">Go to project</a></div>
         <div class="card-link"><a href="projects.html">Return to projects</a></div>
     </div>
 
     <script>
-        // Parse query parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const projectId = urlParams.get('id');
+        const projectId = 1
 
         // Fetch project data
         fetch('projects.json')
@@ -40,10 +45,8 @@
                     document.getElementById('project-title').textContent = project.title;
                     document.getElementById('project-image').src = project.image;
                     document.getElementById('project-image').alt = project.title;
-                    document.getElementById('project-description').textContent = project.description;
                     document.getElementById('project-date_created').textContent = project.date_created;
                     document.getElementById('project-learn_more_link').href = project.learn_more_link;
-                    console.log(project.description);
                 } else {
                     document.getElementById('project-title').textContent = "Project not found.";
                     document.getElementById('project-description').textContent = "The project you are looking for does not exist.";
