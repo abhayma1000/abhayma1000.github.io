@@ -1,11 +1,11 @@
 [
     {
         "id": 1,
-        "title": "Project 1",
-        "description": "A brief description of Project 1 goes here.A brief description of Project 1 goes here.",
-        "image": "project1.jpg",
+        "title": "Personal Website",
+        "description": "This is a personal website that I created to showcase my projects and skills.",
+        "image": "uploads/images/htmlcss.png",
         "link": "project1.html",
-        "learn_more_link": "https://www.google.com",
-        "date_created": "2020-01-01"
+        "learn_more_link": "https://github.com/abhayma1000/abhayma1000.github.io",
+        "date_created": "2025-01-01"
     }
 ]
