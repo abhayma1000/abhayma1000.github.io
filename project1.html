@@ -19,6 +19,7 @@
     <br>
     <header id="project-title"></header>
     <div class="project-container">
+        <h2 id="project-importance" class="card-importance">Project Importance</h2>
         <p class="date" id="project-date_created"></p>
         <img id="project-image" src="" alt="Project Image">
 
@@ -53,6 +54,15 @@
                     document.getElementById('project-image').alt = project.title;
                     document.getElementById('project-date_created').textContent = project.date_created;
                     document.getElementById('project-learn_more_link').href = project.learn_more_link;
+                    if (project.importance == 1) {
+                        document.getElementById('project-importance').textContent = "! Insignificant";
+                    } else if (project.importance == 2) {
+                        document.getElementById('project-importance').textContent = "!! Significant";
+                    } else if (project.importance == 3) {
+                        document.getElementById('project-importance').textContent = "!!! Paramount";
+                    } else {
+                        document.getElementById('project-importance').textContent = "Importance not specified";
+                    }
                 } else {
                     document.getElementById('project-title').textContent = "Project not found.";
                     document.getElementById('project-description').textContent = "The project you are looking for does not exist.";

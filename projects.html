@@ -25,6 +25,7 @@
         fetch('projects.json')
             .then(response => response.json())
             .then(data => {
+                data.sort((a, b) => b.importance - a.importance);
                 const container = document.getElementById('projects-container');
                 data.forEach(project => {
                     const card = document.createElement('div');
@@ -35,7 +36,15 @@
                         ? project.description.substring(0, 200) + '...' 
                         : project.description;
 
+                    let importance_text = "";
+                    for (let i = 0; i < project.importance && i < 3; i++) {
+                        importance_text += "!";
+                    }
+
                     card.innerHTML = `
+                        <div class="card-title" style="float: right; margin-right: 20px;">
+                            <h2>${importance_text}</h2>
+                        </div>
                         <img src="${project.image}" alt="${project.title}">
                         <div class="card-content">
                             <p class="date">${project.date_created}</p>
