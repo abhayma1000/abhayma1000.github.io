@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Abhay Mathur</title>
+    <title>Project1</title>
 </head>
 <body>
     <iframe 
@@ -55,11 +55,11 @@
                     document.getElementById('project-date_created').textContent = project.date_created;
                     document.getElementById('project-learn_more_link').href = project.learn_more_link;
                     if (project.importance == 1) {
-                        document.getElementById('project-importance').textContent = "! Insignificant";
+                        document.getElementById('project-importance').textContent = "Insignificant !";
                     } else if (project.importance == 2) {
-                        document.getElementById('project-importance').textContent = "!! Significant";
+                        document.getElementById('project-importance').textContent = "Significant !";
                     } else if (project.importance == 3) {
-                        document.getElementById('project-importance').textContent = "!!! Paramount";
+                        document.getElementById('project-importance').textContent = "Paramount !";
                     } else {
                         document.getElementById('project-importance').textContent = "Importance not specified";
                     }
