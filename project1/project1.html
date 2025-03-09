@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Project1</title>
 </head>
 <body>
     <iframe 
-        src="navbar.html" 
+        src="../navbar.html" 
         width="100%" 
         height="80px" 
         frameborder="0" 
@@ -23,32 +23,27 @@
         <p class="date" id="project-date_created"></p>
         <img id="project-image" src="" alt="Project Image">
 
-        <!-- Begin page -->
-        <h1>Purpose</h1>
-        <br>
-        <p>The purpose here is to create a personal website that can be a central location holding everything about me</p>
-        <br>
-        <p>This is also a location to dump projects of mine and showcase my work</p>
+        <!-- Make a list of buttons leading to the different dates -->
+        <div id="versionContainer"></div>
 
-        <h1>Future</h1>
-        <p>I will keep this up to date and I hope to keep adding new features like maybe a blog to this website</p>
+        <h3 id="version_statement"></h2>
 
-        <!-- End page -->
+        <div id="main-page"></div>
 
-        
+        <div class="card-link"><a href="../projects.html">Return to projects</a></div>
         <div class="card-link redirect-link"><a id="project-learn_more_link" href="">Go to project</a></div>
-        <div class="card-link"><a href="projects.html">Return to projects</a></div>
     </div>
 
     <script>
-        const projectId = 1
+        const projectId = 1;
 
         // Fetch project data
-        fetch('projects.json')
+        fetch('../projects.json')
             .then(response => response.json())
             .then(data => {
                 const project = data.find(p => p.id == projectId);
                 if (project) {
+                    document.title = `Project ${projectId}`;
                     document.getElementById('project-title').textContent = project.title;
                     document.getElementById('project-image').src = project.image;
                     document.getElementById('project-image').alt = project.title;
@@ -62,6 +57,31 @@
                         document.getElementById('project-importance').textContent = "Paramount !";
                     } else {
                         document.getElementById('project-importance').textContent = "Importance not specified";
+                    }
+                    let versions_container = document.getElementById('versionContainer');
+                    versions_container.innerHTML = "";
+                    project.versions.forEach((label, index) => {
+                        let link = document.createElement("a");
+                        link.textContent = label;
+                        link.href = "#";
+                        link.style.marginRight = "10px"; // Add margin for spacing
+                        link.onclick = (event) => {
+                            event.preventDefault();
+                            fetch(`${label}.html`)
+                                .then(response => response.text())
+                                .then(html => {
+                                    document.getElementById('main-page').innerHTML = html;
+                                    document.getElementById('version_statement').innerHTML = `Version: <span style="color: red;">${label}</span>`;
+                                    document.getElementById('project-date_created').style.color = "white";
+                                })
+                                .catch(error => console.error(`Error loading ${label}.html:`, error));
+                        };
+                        versions_container.appendChild(link);
+                    });
+
+                    // Click on the first link by default
+                    if (project.versions.length > 0) {
+                        versions_container.querySelector("a").click();
                     }
                 } else {
                     document.getElementById('project-title').textContent = "Project not found.";
