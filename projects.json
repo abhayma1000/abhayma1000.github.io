@@ -6,12 +6,50 @@
         "image": "/uploads/images/htmlcss.png",
         "link": "project1/project1.html",
         "date_created": "2025-01-01",
-        "versions": ["2025-05-09", "2025-05-08", "2025-01-01"],
+        "versions": ["2025-03-09", "2025-03-08", "2025-01-01"],
         "external_links": [
             {
                 "title": "GitHub",
                 "link": "https://github.com/abhayma1000/abhayma1000.github.io"
             }],
         "importance": 1
+    },
+    {
+        "id": 2,
+        "title": "BoodaTrack",
+        "description": "A badminton analysis tool",
+        "image": "/uploads/images/boodatrack.jpg",
+        "link": "project2/project2.html",
+        "date_created": "2025-01-24",
+        "versions": ["2025-03-09"],
+        "external_links": [
+            {
+                "title": "GitHub --private",
+                "link": "https://github.com/abhayma1000/InsertName/"
+            }],
+        "importance": 2
+    },
+    {
+        "id": 3,
+        "title": "Yelp Data Challenge",
+        "description": "This is my analysis of the Yelp Dataset for DS3010",
+        "image": "/uploads/images/yelp.png",
+        "link": "project3/project3.html",
+        "date_created": "2025-02-05",
+        "versions": ["2025-03-09"],
+        "external_links": [
+            {
+                "title": "GitHub",
+                "link": "https://github.com/abhayma1000/DS3010FinalProject"
+            },
+            {
+                "title": "Paper",
+                "link": "https://docs.google.com/document/d/1O5L8d1IwdBoGPEtg_2VV0atJ23E4Snq30WCH6bYLp5Q/edit?tab=t.0"
+            },
+            {
+                "title": "Slides",
+                "link": "https://docs.google.com/presentation/d/1Dxa4xhz_3aRu029cikx_IFnciJ8sf6zP1BHDPvDv0nY/edit#slide=id.g2e3ccceb597_0_46"
+            }],
+        "importance": 2
     }
 ]
