@@ -128,6 +128,24 @@ header {
     border-radius: 5px;
 }
 
+.big-card-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-left: 15px;
+    font-family: 'Rajdhani', sans-serif;
+    padding: 10px 100px; /* Increased width, decreased height */
+    transition: all 0.3s ease;
+    font-size: 1.2em; /* Larger text */
+    font-weight: bold; /* Bold text */
+}
+
+.big-card-link a:hover {
+    text-decoration: none;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-radius: 5px;
+}
+
 .card-importance {
     color: var(--accent-color);
 }

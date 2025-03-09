@@ -44,16 +44,16 @@
                     }
 
                     card.innerHTML = `
-                        <div class="card-title" style="float: right; margin-right: 20px;">
+                        <a href="${project.link}"> <div class="card-title" style="float: right; margin-right: 20px;">
                             <h2>${importance_text}</h2>
-                        </div>
-                        <img src="${project.image}" alt="${project.title}">
-                        <div class="card-content">
+                        </div></a>
+                        <a href="${project.link}"><img src="${project.image}" alt="${project.title}"></a>
+                        <a href="${project.link}"> <div class="card-content">
                             <p class="date">${project.date_created}</p>
                             <h3 class="card-title"><a href="${project.link}">${project.title}</a></h3>
                             <p class="card-description">${truncatedDescription}</p>
                             <div class="card-link"><a href="${project.link}">Learn More</a></div>
-                        </div>
+                        </div></a>
                     `;
                     container.appendChild(card);
                 });

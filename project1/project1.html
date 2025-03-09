@@ -28,10 +28,13 @@
 
         <h3 id="version_statement"></h2>
 
+        <h1>External Links</h1>
+
+        <div id="externalLinks"></div>
+
         <div id="main-page"></div>
 
         <div class="card-link"><a href="../projects.html">Return to projects</a></div>
-        <div class="card-link redirect-link"><a id="project-learn_more_link" href="">Go to project</a></div>
     </div>
 
     <script>
@@ -39,7 +42,12 @@
 
         // Fetch project data
         fetch('../projects.json')
-            .then(response => response.json())
+            .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
             .then(data => {
                 const project = data.find(p => p.id == projectId);
                 if (project) {
@@ -48,7 +56,6 @@
                     document.getElementById('project-image').src = project.image;
                     document.getElementById('project-image').alt = project.title;
                     document.getElementById('project-date_created').textContent = project.date_created;
-                    document.getElementById('project-learn_more_link').href = project.learn_more_link;
                     if (project.importance == 1) {
                         document.getElementById('project-importance').textContent = "Insignificant !";
                     } else if (project.importance == 2) {
@@ -58,15 +65,24 @@
                     } else {
                         document.getElementById('project-importance').textContent = "Importance not specified";
                     }
+
+
+                    // Create a list of links to different versions
                     let versions_container = document.getElementById('versionContainer');
                     versions_container.innerHTML = "";
                     project.versions.forEach((label, index) => {
+                        let div = document.createElement("div");
+                        div.className = "card-link"; // Add card-link class to div
+                        div.style.display = "inline-block"; // Make divs appear side-by-side
                         let link = document.createElement("a");
                         link.textContent = label;
                         link.href = "#";
-                        link.style.marginRight = "10px"; // Add margin for spacing
                         link.onclick = (event) => {
                             event.preventDefault();
+                            // Remove .card-link-selected class from all links
+                            document.querySelectorAll('.card-link a').forEach(a => a.classList.remove('card-link-selected'));
+                            // Add .card-link-selected class to the clicked link
+                            link.classList.add('card-link-selected');
                             fetch(`${label}.html`)
                                 .then(response => response.text())
                                 .then(html => {
@@ -76,13 +92,32 @@
                                 })
                                 .catch(error => console.error(`Error loading ${label}.html:`, error));
                         };
-                        versions_container.appendChild(link);
+                        div.appendChild(link);
+                        versions_container.appendChild(div);
                     });
+
+
+                    // get all the external links
+                    let external_links = document.getElementById('externalLinks');
+                    external_links.innerHTML = "";
+                    project.external_links.forEach((link) => {
+                        let div = document.createElement("div");
+                        div.className = "big-card-link"; // Add card-link class to div
+                        let a = document.createElement("a");
+                        a.href = link['link'];
+                        a.target = "_blank";
+                        a.textContent = link['title'];
+                        div.appendChild(a);
+                        external_links.appendChild(div);
+                        external_links.appendChild(document.createElement("br")); // Add space between links
+                    });
+
 
                     // Click on the first link by default
                     if (project.versions.length > 0) {
                         versions_container.querySelector("a").click();
                     }
+
                 } else {
                     document.getElementById('project-title').textContent = "Project not found.";
                     document.getElementById('project-description').textContent = "The project you are looking for does not exist.";

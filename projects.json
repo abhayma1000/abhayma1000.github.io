@@ -5,9 +5,13 @@
         "description": "This is a personal website that I created to showcase my projects and skills.",
         "image": "/uploads/images/htmlcss.png",
         "link": "project1/project1.html",
-        "learn_more_link": "https://github.com/abhayma1000/abhayma1000.github.io",
         "date_created": "2025-01-01",
-        "versions": ["2025-05-08", "2025-01-01"],
+        "versions": ["2025-05-09", "2025-05-08", "2025-01-01"],
+        "external_links": [
+            {
+                "title": "GitHub",
+                "link": "https://github.com/abhayma1000/abhayma1000.github.io"
+            }],
         "importance": 1
     }
 ]
