@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Project1</title>
+</head>
+<body>
+    <iframe 
+        src="../navbar.html" 
+        width="100%" 
+        height="80px" 
+        frameborder="0" 
+        style="position: absolute; top: 0; left: 0; z-index: 1000; border: none;">
+    </iframe>
+    <br>
+    <br>
+    <br>
+    <header id="project-title"></header>
+    <div class="project-container">
+        <h2 id="project-importance" class="card-importance">Project Importance</h2>
+        <p class="date" id="project-date_created"></p>
+        <img id="project-image" src="" alt="Project Image">
+
+        <!-- Make a list of buttons leading to the different dates -->
+        <div id="versionContainer"></div>
+
+        <h3 id="version_statement"></h2>
+
+        <h1>External Links</h1>
+
+        <div id="externalLinks"></div>
+
+        <div id="main-page"></div>
+
+        <div class="card-link"><a href="../projects.html">Return to projects</a></div>
+    </div>
+
+    <script>
+        const projectId = 4;
+
+        // Fetch project data
+        fetch('../projects.json')
+            .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+            .then(data => {
+                const project = data.find(p => p.id == projectId);
+                if (project) {
+                    document.title = `Project ${projectId}`;
+                    document.getElementById('project-title').textContent = project.title;
+                    document.getElementById('project-image').src = project.image;
+                    document.getElementById('project-image').alt = project.title;
+                    document.getElementById('project-date_created').textContent = project.date_created;
+                    if (project.importance == 1) {
+                        document.getElementById('project-importance').textContent = "Insignificant !";
+                    } else if (project.importance == 2) {
+                        document.getElementById('project-importance').textContent = "Significant !";
+                    } else if (project.importance == 3) {
+                        document.getElementById('project-importance').textContent = "Paramount !";
+                    } else {
+                        document.getElementById('project-importance').textContent = "Importance not specified";
+                    }
+
+
+                    // Create a list of links to different versions
+                    let versions_container = document.getElementById('versionContainer');
+                    versions_container.innerHTML = "";
+                    project.versions.forEach((label, index) => {
+                        let div = document.createElement("div");
+                        div.className = "card-link"; // Add card-link class to div
+                        div.style.display = "inline-block"; // Make divs appear side-by-side
+                        let link = document.createElement("a");
+                        link.textContent = label;
+                        link.href = "#";
+                        link.onclick = (event) => {
+                            event.preventDefault();
+                            // Remove .card-link-selected class from all links
+                            document.querySelectorAll('.card-link a').forEach(a => a.classList.remove('card-link-selected'));
+                            // Add .card-link-selected class to the clicked link
+                            link.classList.add('card-link-selected');
+                            fetch(`${label}.html`)
+                                .then(response => response.text())
+                                .then(html => {
+                                    document.getElementById('main-page').innerHTML = html;
+                                    document.getElementById('version_statement').innerHTML = `Version: <span style="color: red;">${label}</span>`;
+                                    document.getElementById('project-date_created').style.color = "white";
+                                })
+                                .catch(error => console.error(`Error loading ${label}.html:`, error));
+                        };
+                        div.appendChild(link);
+                        versions_container.appendChild(div);
+                    });
+
+
+                    // get all the external links
+                    let external_links = document.getElementById('externalLinks');
+                    external_links.innerHTML = "";
+                    project.external_links.forEach((link) => {
+                        let div = document.createElement("div");
+                        div.className = "big-card-link"; // Add card-link class to div
+                        let a = document.createElement("a");
+                        a.href = link['link'];
+                        a.target = "_blank";
+                        a.textContent = link['title'];
+                        div.appendChild(a);
+                        external_links.appendChild(div);
+                        external_links.appendChild(document.createElement("br")); // Add space between links
+                    });
+
+
+                    // Click on the first link by default
+                    if (project.versions.length > 0) {
+                        versions_container.querySelector("a").click();
+                    }
+
+                } else {
+                    document.getElementById('project-title').textContent = "Project not found.";
+                    document.getElementById('project-description').textContent = "The project you are looking for does not exist.";
+                }
+            })
+            .catch(error => console.error('Error loading project data:', error));
+    </script>
+</body>
+</html>
