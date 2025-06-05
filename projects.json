@@ -58,8 +58,8 @@
         "description": "3D Printed Rockets. Integrated electronics",
         "image": "/uploads/images/rocket.png",
         "link": "project4/project4.html",
-        "date_created": "2023-02-05",
-        "versions": ["2025-11-03"],
+        "date_created": "2023-11-03",
+        "versions": ["2025-06-05"],
         "external_links": [
             {
                 "title": "GitHub",
