@@ -51,5 +51,20 @@
                 "link": "https://docs.google.com/presentation/d/1Dxa4xhz_3aRu029cikx_IFnciJ8sf6zP1BHDPvDv0nY/edit#slide=id.g2e3ccceb597_0_46"
             }],
         "importance": 2
+    },
+    {
+        "id": 4,
+        "title": "Mid Power Rocketry",
+        "description": "3D Printed Rockets. Integrated electronics",
+        "image": "/uploads/images/rocket.png",
+        "link": "project4/project4.html",
+        "date_created": "2023-02-05",
+        "versions": ["2025-11-03"],
+        "external_links": [
+            {
+                "title": "GitHub",
+                "link": "https://github.com/abhayma1000/Rockets"
+            }],
+        "importance": 1
     }
 ]
