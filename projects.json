@@ -17,22 +17,22 @@
     {
         "id": 2,
         "title": "BoodaTrack",
-        "description": "A badminton analysis tool",
+        "description": "A sports analysis tool, specific to injury prevention",
         "image": "/uploads/images/boodatrack.jpg",
         "link": "project2/project2.html",
         "date_created": "2025-01-24",
         "versions": ["2025-03-09"],
         "external_links": [
             {
-                "title": "GitHub --private",
-                "link": "https://github.com/abhayma1000/InsertName/"
+                "title": "GitHub",
+                "link": "https://github.com/abhayma1000/BoodaTrack/"
             }],
         "importance": 2
     },
     {
         "id": 3,
-        "title": "Yelp Data Challenge",
-        "description": "This is my analysis of the Yelp Dataset for DS3010",
+        "title": "Data-backed Business Risk Assessment",
+        "description": "This is my analysis of the Yelp Dataset for business risk assessment",
         "image": "/uploads/images/yelp.png",
         "link": "project3/project3.html",
         "date_created": "2025-02-05",
@@ -64,7 +64,26 @@
             {
                 "title": "GitHub",
                 "link": "https://github.com/abhayma1000/Rockets"
+            },
+            {
+                "title": "YouTube video",
+                "link": "hi"
             }],
-        "importance": 1
+        "importance": 2
+    },
+    {
+        "id": 5,
+        "title": "MARL UAV Pursuit Evasion",
+        "description": "MARL trained pursuit evasion for attackers vs. defenders",
+        "image": "/uploads/images/marl.png",
+        "link": "project5/project5.html",
+        "date_created": "2025-7-03",
+        "versions": ["2025-7-03"],
+        "external_links": [
+            {
+                "title": "No links yet...",
+                "link": "https://abhayma1000.github.io"
+            }],
+        "importance": 3
     }
 ]
