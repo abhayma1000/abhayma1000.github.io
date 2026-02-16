@@ -16,25 +16,10 @@
     },
     {
         "id": 2,
-        "title": "BoodaTrack",
-        "description": "A sports analysis tool, specific to injury prevention",
-        "image": "/uploads/images/boodatrack.jpg",
-        "link": "project2/project2.html",
-        "date_created": "2025-01-24",
-        "versions": ["2025-03-09"],
-        "external_links": [
-            {
-                "title": "GitHub",
-                "link": "https://github.com/abhayma1000/BoodaTrack/"
-            }],
-        "importance": 2
-    },
-    {
-        "id": 3,
         "title": "Data-backed Business Risk Assessment",
         "description": "This is my analysis of the Yelp Dataset for business risk assessment",
         "image": "/uploads/images/yelp.png",
-        "link": "project3/project3.html",
+        "link": "project2/project2.html",
         "date_created": "2025-02-05",
         "versions": ["2025-03-09"],
         "external_links": [
@@ -53,30 +38,26 @@
         "importance": 2
     },
     {
-        "id": 4,
+        "id": 3,
         "title": "Mid Power Rocketry",
         "description": "3D Printed Rockets. Integrated electronics",
         "image": "/uploads/images/rocket.png",
-        "link": "project4/project4.html",
+        "link": "project3/project3.html",
         "date_created": "2023-11-03",
         "versions": ["2025-06-05"],
         "external_links": [
             {
                 "title": "GitHub",
                 "link": "https://github.com/abhayma1000/Rockets"
-            },
-            {
-                "title": "YouTube video",
-                "link": "hi"
             }],
         "importance": 2
     },
     {
-        "id": 5,
+        "id": 4,
         "title": "MARL UAV Pursuit Evasion",
         "description": "MARL trained pursuit evasion for attackers vs. defenders",
         "image": "/uploads/images/marl.png",
-        "link": "project5/project5.html",
+        "link": "project4/project4.html",
         "date_created": "2025-7-03",
         "versions": ["2025-7-03"],
         "external_links": [
