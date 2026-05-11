@@ -65,12 +65,12 @@
                 "title": "No links yet...",
                 "link": "https://abhayma1000.github.io"
             }],
-        "importance": 3
+        "importance": 2
     },
     {
         "id": 5,
         "title": "Navigation",
-        "description": "MARL trained pursuit evasion for attackers vs. defenders",
+        "description": "Air and space navigation algorithms and simulations",
         "image": "/uploads/images/navigation.jpg",
         "link": "project5/project5.html",
         "date_created": "2026-5-11",
@@ -85,7 +85,7 @@
     {
         "id": 6,
         "title": "Quantum Games 4.0",
-        "description": "MARL trained pursuit evasion for attackers vs. defenders",
+        "description": "Quantum Games website",
         "image": "/uploads/images/quantum_games.jpg",
         "link": "project6/project6.html",
         "date_created": "2026-5-11",
