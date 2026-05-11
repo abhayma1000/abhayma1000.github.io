@@ -66,5 +66,35 @@
                 "link": "https://abhayma1000.github.io"
             }],
         "importance": 3
+    },
+    {
+        "id": 5,
+        "title": "Navigation",
+        "description": "MARL trained pursuit evasion for attackers vs. defenders",
+        "image": "/uploads/images/navigation.jpg",
+        "link": "project4/project5.html",
+        "date_created": "2026-5-11",
+        "versions": ["2026-5-11"],
+        "external_links": [
+            {
+                "title": "No links yet...",
+                "link": "https://abhayma1000.github.io"
+            }],
+        "importance": 3
+    },
+    {
+        "id": 6,
+        "title": "Quantum Games 4.0",
+        "description": "MARL trained pursuit evasion for attackers vs. defenders",
+        "image": "/uploads/images/quantum_games.jpg",
+        "link": "project4/project4.html",
+        "date_created": "2026-5-11",
+        "versions": ["2026-5-11"],
+        "external_links": [
+            {
+                "title": "No links yet...",
+                "link": "https://abhayma1000.github.io"
+            }],
+        "importance": 3
     }
 ]

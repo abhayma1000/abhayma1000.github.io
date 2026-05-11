@@ -1,0 +1,11 @@
+<!-- Begin page -->
+<h1>Overview</h1>
+    <p>Navigation</p>
+    <p>Got to learn a bit about navigation, filter theory, a little about liner and non-linear systems</p>
+    <p>Key takeaways:</p>
+    <ul>
+        <li>For every estimate or measurement, there is some uncertainty, that can approximately be modeled as a Gaussian distribution. KFs are a real-time optimal way to combine these estimates</li>
+        <li>Not every system is fully observable or controllable. For R^3, obsevability is simple, but for objects like quaternions, it's more complex</li>
+        <li>For non-linear systems, we can linearize about a certain point for dynamics propagation and measurements. Introduce some error there, but works well enough for small time steps and small uncertainties (small-angle approx.)</li>
+        <li>For systems for example position and orientation are tightly coupled, undcertainties in one propagate to the other and depending on mission requirements, might have to lose mathematical accuracy</li>
+<!-- End page -->

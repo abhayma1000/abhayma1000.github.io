@@ -10,5 +10,18 @@
 <h1>Overview</h1>
     <p>What if we treat pursuit evasion like a RL optimizable video game...</p>
 
-    <p>Stay tuned for results...</p>
+    <p>The rules of the game are simple: The evader (red) has the objective of reaching the green circle. The goal of the pursuer (blue) is to reach the evader before they reach the green circle</p>
+
+    <p>We can model this as a reinforcement learning problem where each agent learns to optimize their policy based on the rewards received for achieving their objectives.</p>
+    <p>The pursuers have information about their position ahd the evader's position. The evaders know of their position and that of the target green circle.</p>
+
+    <p>Iteratively, each side trains on a collection of the latest agent of the opposing side, some past agents, and default settings</p>
+    <p>Both sides learn strategies to thwart the other side. The evader might initially learn to just use a proportional controller to the green circle. However, the pursuer might easily stop that. Then, the evader might learn to use a more sophisticated strategy. Then train the pursuer and repeat</p>
+    <p>For example, at training iteration 6 of the pursuer, it trains on a collection of the latest evader, some past evaders, and default configurations like a wave-like evasion maneuver, random evasion maneuver, etc.</p>
+
+    <p>Tried Multi-agent Reinforcement Learning where multiple pursuers and evaders interact in this simulated environment. Tried different CTDE and DTDE approaches, however found little success.</p>
+    <p>Unknown why, but they didn't perform well. Perhaps due to the exponentially larger action spaces, training time, and computational complexity.</p>
+
+
+    <p>Future directions include more accurate dynamics to make the simulation more realistic and accounting for uncertainties in the environment and measurements</p>
 <!-- End page -->
